@@ -2,6 +2,22 @@
 <html lang="en" dir="ltr">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <head>
+    <style media="screen">
+    .button {
+        background-color: red;
+        border: none;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+    }
+    .button1 {border-radius: 6px;}
+    .button2 {border-radius: 6px;}
+
+    </style>
     <script type="text/javascript">
       function driver_contact(){
         window.open("https://docs.google.com/forms/d/e/1FAIpQLSfj_523_toxK5G1xRNKSVJwHEmR36k96BZxFjWvo3uhv6JV8g/viewform?usp=sf_link")
@@ -24,7 +40,7 @@
     <img src="./van2.jpeg" alt="van">
     <p>
 <h1>List of Transporters</h1>
-This web app aims to help people find transporters to Morocco quickly and efficiently with 
+This web app aims to help people find transporters to Morocco quickly and efficiently with
 a minimum of hassle, good luck
 
 
@@ -38,10 +54,10 @@ a minimum of hassle, good luck
 
     </ul>
     <h3>For drivers to add your details to our web app </h3>
-    <button  onclick="driver_contact()"  type="button" name="button">press here</button>
+    <button  class="button button1" onclick="driver_contact()"  type="button" name="button">press here</button>
 
     <h3>For customres to contact us</h3>
-    <button  onclick="customer_contact()"  type="button" name="button">press here</button>
+    <button class="button button2" onclick="customer_contact()"  type="button" name="button">press here</button>
 
       </div>
   </body>
