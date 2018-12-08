@@ -2,6 +2,17 @@
 <html lang="en" dir="ltr">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <head>
+    <script type="text/javascript">
+    function range(start, end) {
+        var ans = [];
+        for (let i = start; i <= end; i++) {
+            ans.push(i);
+        }
+        return ans;
+    }
+
+    //  window.onload = random_driver();
+    </script>
     <style media="screen">
     .button {
         background-color: red;
@@ -20,6 +31,11 @@
     table, th, td {
   border: 1px solid black;
 }
+h4 {
+  color: red;
+}
+
+
 
     </style>
 
@@ -30,15 +46,13 @@
 
 
       function customer_contact(){
-        window.open("https://docs.google.com/forms/d/e/1FAIpQLSfIU3h6ChsjWJ2AtY2hFT5ENs4Q2WFn8Dhfk3EEgxoxyOBv_g/viewform?usp=sf_link")
-      }
-
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSfIU3h6ChsjWJ2AtY2hFT5ENs4Q2WFn8Dhfk3EEgxoxyOBv_g/viewform?usp=sf_link")}
 
     </script>
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body style="background-color: yellow">
+  <body  onload ="random_driver()"  style="background-color: yellow">
     <div class="" align="center">
 
 
@@ -52,7 +66,9 @@ a minimum of hassle, good luck
 
 
     </p>
-      <h4>Transporter names and numbers</h4>
+      <h3>Transporter names and numbers</h3>
+      <h4 color ="red" id ="display_driver"> Lucky Transporter of the page </h4>
+
     <table style="width:100%">
   <tr>
     <th>Firstname</th>
@@ -83,5 +99,22 @@ a minimum of hassle, good luck
     <button class="button button2" onclick="customer_contact()"  type="button" name="button">press here</button>
 
       </div>
+      <script type="text/javascript">
+      function random_driver(){
+
+        var names =range(1,3);
+
+        var name = names[Math.floor(Math.random()*names.length)];
+        if (name === 1){document.getElementById("display_driver").innerHTML ="Hassan is the Driver of the page please choose him";
+      }
+      else if(name === 2){
+        document.getElementById("display_driver").innerHTML ="Driss is the Driver of the page please choose him";
+      }
+      else {document.getElementById("display_driver").innerHTML="Hisham is the Driver of the page please choose him";
+
+      }
+      }
+      </script>
+
   </body>
 </html>
