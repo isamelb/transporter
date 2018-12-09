@@ -55,7 +55,7 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body  onload ="random_driver()"  style="background-color: yellow">
+  <body  onload ="rotater()"  style="background-color: yellow">
     <div class="" align="center">
 
 
@@ -118,6 +118,33 @@ a minimum of hassle, good luck
 
 
       </div>
+      <script language="JavaScript1.2">
+
+var howOften = 5; //number often in seconds to rotate
+var current = 0; //start the counter at 0
+var ns6 = document.getElementById&&!document.all; //detect netscape 6
+
+// place your images, text, etc in the array elements here
+var items = new Array();
+
+ items[0]="Hassan Pounda is the Driver of the page please choose him";
+ items[1]="Driss is the Driver of the page please choose him";
+ items[2]="Hisham is the Driver of the page please choose him";
+ items[3]="Hassan Tetouani is the Driver of the page please choose him";
+
+ function rotater() {
+     document.getElementById("display_driver").innerHTML = items[current];
+     current = (current==items.length-1) ? 0 : current + 1;
+     setTimeout("rotater()",howOften*1000);
+ }
+
+
+ window.onload=rotater;
+ //-->
+ </script>
+
+
+
       <script type="text/javascript">
       function random_driver(){
 
