@@ -63,7 +63,7 @@
 
     <img src="./ssstransporter.jpg" alt="van">
     <p>
-      <h1 style="color:blue" >lpounda.com</h1>
+      <h1 id ="display_banner" style="color:blue" >lpounda.com</h1>
 <h1>List of Transporters</h1>
 This web app aims to help people find transporters to Morocco quickly and efficiently with
 a minimum of hassle, good luck
@@ -73,7 +73,7 @@ a minimum of hassle, good luck
 
     </p>
 
-      <h3 class="lucky_driver"color ="red" id ="display_driver"> Lucky Transporter of the page </h3>
+      <h3 class="lucky_driver" color ="red" id ="display_driver"> Lucky Transporter of the page </h3>
       <h3>Transporter names and numbers</h3>
     <table class="w3-table-all w3-hoverable"style="width:100%">
   <tr>
@@ -93,14 +93,14 @@ a minimum of hassle, good luck
   <tr>
     <td>Driss</td>
 
-    <td><a href="tel:447834351964" >Phone</a> </td>
+    <td><a href="tel:07834351964" >Phone</a> </td>
 
     <td>A very hard working and reliable driver</td>
   </tr>
   <tr>
     <td>Hisham</td>
 
-    <td><a href="tel:447809566087" >Phone</a> </td>
+    <td><a href="tel:07809566087" >Phone</a> </td>
 
     <td>A good driver with an impressive track record</td>
   </tr>
@@ -108,7 +108,7 @@ a minimum of hassle, good luck
 <tr>
   <td>Hassan Tetouani</td>
 
-  <td><a href="tel:447392408365" >Phone</a> </td>
+  <td><a href="tel:07392408365" >Phone</a> </td>
 
   <td>A good driver with a good record</tr>
   <tr>
@@ -142,14 +142,19 @@ var items = new Array();
  items[7]=" To all drivers the more accurate the information, the more business"
  items[8]="lpounda.com   lpounda.com   lpounda.com    lpounda.com     lpounda.com"
 
+
+
+
+
  function rotater() {
      document.getElementById("display_driver").innerHTML = items[current];
      current = (current==items.length-1) ? 0 : current + 1;
      setTimeout("rotater()",howOften*1000);
  }
+  window.onload=rotater;
 
 
- window.onload=rotater;
+
  //-->
  </script>
 
